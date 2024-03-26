@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class d3_3{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+       //int arr[]=new int[]{10,30,20,5,50,2};
+       int n;
+       System.out.print("enter the number of array elements:");
+       n=sc.nextInt();
+       int[] arr=new int[10];
+       System.out.print("enter the element");
+       for(int i=0;i<n;i++){
+           arr[i]=sc.nextInt();
+       }
+           
+    
+       
+       int sv=arr[0];
+       int lv=arr[0];
+       for(int i=1; i<n;i++){
+           if (arr[i]>lv){
+               lv=arr[i];
+               
+           }
+           if(arr[i]<sv){
+               sv=arr[i];
+               
+           }
+       }
+       System.out.println("The smallest element is:"+sv);
+       System.out.println("The largest element is:"+lv);
+       
+       
+    }
+}
